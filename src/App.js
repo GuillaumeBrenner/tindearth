@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-import React,  { useState } from 'react';
 
 function App() {
   const [score, setScore] = useState(75);
@@ -20,14 +19,18 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div>
-          <h2>Score Percentage Calculator</h2>
-          <p>Score: {score}</p>
-          <p>Maximum Possible Score: {maxScore}</p>
-          <p>Percentage: {percentage}%</p>
-        </div>
-        <button onClick={increaseScore}>Increase Score</button>
-        <button onClick={decreaseScore}>Increase Score</button>
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
       </header>
     </div>
   );
