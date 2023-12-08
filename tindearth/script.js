@@ -8,11 +8,13 @@ var point = 0 ;
 var pointTransport = 0 ;
 var pointConsomation = 0 ;
 var pointTrash = 0 ;
+var pointEco = 0 ;
 
 var pointMax = 0 ;
 var pointTransportMax = 0 ;
 var pointConsomationMax = 0 ;
-var pointTrashMax = 0 ; 
+var pointTrashMax = 0 ;
+var pointEcoMax = 0 ; 
 
 // Tous pour les swipe 
 function swipe(side) {
@@ -33,6 +35,7 @@ function addPoint(side){
       case 'transport': pointTransportMax += currentQuestionValue; break;
       case 'trash': pointTrashMax += currentQuestionValue; break;
       case 'consommation': pointConsomationMax += currentQuestionValue; break;
+      case 'eco': pointEcoMax += currentQuestionValue; break;
     }
   if (side=="left"){
     point += -currentQuestionValue ;
@@ -40,6 +43,7 @@ function addPoint(side){
       case 'transport': pointTransport += -currentQuestionValue; break;
       case 'trash': pointTrash += -currentQuestionValue; break;
       case 'consommation': pointConsomation += -currentQuestionValue; break;
+      case 'eco': pointEco += -currentQuestionValue; break;
     }
   }
   else {
@@ -48,6 +52,7 @@ function addPoint(side){
       case 'transport': pointTransport += currentQuestionValue; break;
       case 'trash': pointTrash += currentQuestionValue; break;
       case 'consommation': pointConsomation += currentQuestionValue; break;
+      case 'eco': pointEco += currentQuestionValue; break;
     }
   }
 }
@@ -64,11 +69,11 @@ function slide(direction) {
   const card = document.getElementById("card-question");
   let currentPosition = 0;
   const targetPosition = 900;
-  const step = 50;
+  const step = 30;
 
   function animate() {
     currentPosition += (direction === "left" ? -step : step);
-    card.style.transform = `translateX(${currentPosition}px) rotate(${currentPosition}deg)`;
+    card.style.transform = `translateX(${currentPosition}px) rotate(${currentPosition/1.5}deg)`;
   
     if ((direction === "left" && currentPosition > -targetPosition) ||
         (direction === "right" && currentPosition < targetPosition)) {
@@ -93,10 +98,11 @@ function questionLoad(){
         
         document.querySelector('#randomQuestion').textContent = question.question;
         document.querySelector('#p-total').textContent = "Scores : " + point+ "/"+pointMax;
-        document.querySelector('#p-transport').textContent = "Mobilité durable :  " + pointTransport + "/"+pointTransportMax;
-        document.querySelector('#p-trash').textContent = "Gestion écologique : " + pointTrash+ "/"+pointTrashMax;
-        document.querySelector('#p-consommation').textContent = "Consommation responsable : " + pointConsomation+ "/"+pointConsomationMax;
-        
+        document.querySelector('#p-transport').textContent = "mobilité durable :  " + pointTransport + "/"+pointTransportMax;
+        document.querySelector('#p-trash').textContent = "engagement et sensibilisation : " + pointTrash+ "/"+pointTrashMax;
+        document.querySelector('#p-consommation').textContent = "consommation responsable : " + pointConsomation+ "/"+pointConsomationMax;
+        document.querySelector('#p-eco').textContent = "écologique : " + pointEco+ "/"+pointEcoMax;
+
         currentQuestionValue = question.value;
         questionType = question.type;
         questionAsk ++;
