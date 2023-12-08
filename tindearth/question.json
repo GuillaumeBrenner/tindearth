@@ -1,7 +1,7 @@
 { 
     "questions_ecologie": [
       {
-        "question": "Triez-vous régulièrement vos déchets et recyclez-vous autant que possible ? ",
+        "question": "Triez-vous régulièrement vos déchets et recyclez-vous autant que possible ?",
         "value" : 10,
         "type" : "eco"},
         {
@@ -9,43 +9,43 @@
         "value" : 10,
         "type" : "eco"},
           {
-        "question": " Laissez-vous souvent des appareils électroniques en veille au lieu de les éteindre complètement ?  ",
+        "question": " Laissez-vous souvent des appareils électroniques en veille au lieu de les éteindre complètement ?",
         "value" : -10,
         "type" : "eco"},
       {
-        "question": "Avez-vous installé des ampoules LED dans votre domicile ? ",
+        "question": "Avez-vous installé des ampoules LED dans votre domicile ?",
         "value" : 10,
         "type" : "consommation"},
          {
-        "question": " Avez-vous des panneaux solaires à votre domicile ? ",
+        "question": " Avez-vous des panneaux solaires à votre domicile ?",
         "value" : 10,
         "type" : "consommation"},
        {
-        "question": " Utilisez-vous fréquemment des produits contenant des ingrédients toxiques ou néfastes pour l'environnement ? ",
+        "question": " Utilisez-vous fréquemment des produits contenant des ingrédients toxiques ou néfastes pour l'environnement ?",
         "value" : 10,
         "type" : "consommation"},
       {
-        "question": "Utilisez-vous principalement les transports en commun ou d'autres moyens de transport partagé ? ",
+        "question": "Utilisez-vous principalement les transports en commun ou d'autres moyens de transport partagé ?",
         "value" : 10,
         "type" : "transport"},
          {
-        "question": " Possédez-vous une voiture électrique ?   ",
+        "question": " Possédez-vous une voiture électrique ?",
         "value" : 10,
         "type" : "transport"},
        {
-        "question": " Privilégiez-vous le covoiturage lorsque cela est possible ?   ",
+        "question": " Privilégiez-vous le covoiturage lorsque cela est possible ?",
         "value" : 10,
         "type" : "transport"},
       {
-        "question": "Participez-vous à des activités bénévoles ou des actions de nettoyage pour l'environnement ?  ",
+        "question": "Participez-vous à des activités bénévoles ou des actions de nettoyage pour l'environnement ?",
         "value" : 10,
         "type" : "trash"},
          {
-        "question": " Vous trouvez aussi que les organisations environnementales ne servent  a rien  ?    ",
-        "value" : 10,
+        "question": " Vous trouvez aussi que les organisations environnementales ne servent  a rien  ?",
+        "value" : -10,
         "type" : "trash"},
        {
-        "question": " Contribuez-vous à des projets de préservation de la nature ou de reboisement de manière régulière ?    ",
+        "question": " Contribuez-vous à des projets de préservation de la nature ou de reboisement de manière régulière ?",
         "value" : 10,
         "type" : "trash"}]
 }
