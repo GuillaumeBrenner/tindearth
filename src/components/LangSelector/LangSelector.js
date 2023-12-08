@@ -22,6 +22,7 @@ function LangSelector() {
         >
           FR
         </option>
+
         <option
           type="select"
           value="en"
@@ -30,6 +31,26 @@ function LangSelector() {
           className="en"
         >
           EN
+        </option>
+
+        <option
+          type="select"
+          value="ar"
+          name="language"
+          defaultChecked={selectedLang === "ar"}
+          className="en"
+        >
+          AR
+        </option>
+
+        <option
+          type="select"
+          value="esp"
+          name="language"
+          defaultChecked={selectedLang === "esp"}
+          className="en"
+        >
+          ES
         </option>
       </select>
     </div>

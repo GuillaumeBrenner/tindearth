@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
+import { useTranslation } from "react-i18next";
 import LangSelector from "../components/LangSelector/LangSelector";
 
 function NavBar() {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
+
+  const { t } = useTranslation();
+
   return (
     <>
       <nav className="navbar">
@@ -24,19 +28,7 @@ function NavBar() {
                 className="nav-links"
                 onClick={handleClick}
               >
-                Acceuil
-              </NavLink>
-            </li>
-
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/quiz"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Forum
+                {t("Home")}
               </NavLink>
             </li>
 
@@ -48,7 +40,19 @@ function NavBar() {
                 className="nav-links"
                 onClick={handleClick}
               >
-                Quiz
+                {t("Forum")}
+              </NavLink>
+            </li>
+
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/quiz"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                {t("Quiz")}
               </NavLink>
             </li>
 
