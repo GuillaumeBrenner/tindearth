@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 import "./Quiz.css";
 
 export const Quiz = () => {
@@ -157,20 +156,25 @@ export const Quiz = () => {
     const logoElement = document.getElementById("logo");
 
     if (randomIndex === 1) {
-      logoElement.src = "img/Tindearth-w.png";
+      logoElement.src = "images/Tindearth-w.png";
     } else {
-      logoElement.src = "img/Tindearth.png";
+      logoElement.src = "images/Tindearth.png";
     }
   };
 
   // Rendu du composant
   return (
-    <div className="Quiz">
+    <div
+      className="Quiz"
+      style={{
+        backgroundImage: 'url("/images/background.png")',
+        height: "100vh",
+      }}
+    >
       <div className="Quizbackground">
         <div className="card-container" id="card-question">
           <div className="card" id="card">
             <img src="images/tindearth.png" alt="Profile Image" id="logo" />
-
             <p id="randomQuestion">Question</p>
             <div className="buttons">
               <button onClick={() => swipe("left")}>
