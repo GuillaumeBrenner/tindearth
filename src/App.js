@@ -1,24 +1,36 @@
-import "./App.css";
-import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-
-import Navbar from "./components/Navbar/navbar";
-import home from "./components/pages/home";
-import quiz from "./components/pages/quiz";
-import forum from "./components/pages/forum";
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
+  const [score, setScore] = useState(75);
+  const [maxScore, setMaxScore] = useState(100); 
+  const percentage = (score/maxScore) * 100;
+
+  const increaseScore = () => {
+    // You can add validation logic or constraints if needed
+    setScore(score + 5);
+  };
+
+  const decreaseScore = () => {
+    // You can add validation logic or constraints if needed
+    setScore(score - 5);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <>
-          <Router>
-            <Navbar />
-            <Route path="/" exact component={home} />
-            <Route path="/quiz" component={quiz} />
-            <Route path="/forum" component={forum} />
-          </Router>
-        </>
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
       </header>
     </div>
   );
