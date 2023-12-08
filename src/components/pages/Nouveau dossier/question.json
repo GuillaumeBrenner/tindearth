@@ -1,0 +1,45 @@
+{ 
+    "questions_ecologie": [
+      {
+        "question": "Avez-vous installé des ampoules LED dans votre domicile ?",
+        "value" : 10,
+        "type" : "consommation"
+      },
+      {
+        "question": "Éteignez-vous les appareils électroniques lorsqu'ils ne sont pas utilisés ? ",
+        "value" : 20,
+        "type" : "consommation"
+      },
+      {
+        "question": "Utilisez-vous un thermostat programmable pour réguler la température de votre domicile ?",
+        "value" : 30,
+        "type" : "consommation"
+      },
+      {
+        "question": "Utilisez-vous principalement les transports en commun ou d'autres moyens de transport partagé ?",
+        "value" : 20,
+        "type" : "transport"
+      },
+      {
+        "question": "Possédez-vous une voiture électrique ou hybride ?",
+        "value" : 30,
+        "type" : "transport"
+      },
+      {
+        "question": "Privilégiez-vous le covoiturage lorsque cela est possible ?",
+        "value" : 10,
+        "type" : "transport"
+      },  
+      {
+        "question": "Pratiquez-vous activement le recyclage ?",
+        "value" : 20,
+        "type" : "trash"
+      },
+      {
+        "question": "Réduisez-vous la production de déchets en évitant les emballages superflus?",
+        "value" : 10,
+        "type" : "trash"
+      }
+    ]
+  }
+  
