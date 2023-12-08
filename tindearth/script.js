@@ -1,13 +1,18 @@
 var nbMaxQuestion = 10;
 
-var point = 0 ;
 var currentQuestionValue = 0;
 var questionAsk = 0;
 var questionType = "r";
 
+var point = 0 ;
 var pointTransport = 0 ;
 var pointConsomation = 0 ;
-var pointTrash = 0 ; 
+var pointTrash = 0 ;
+
+var pointMax = 0 ;
+var pointTransportMax = 0 ;
+var pointConsomationMax = 0 ;
+var pointTrashMax = 0 ; 
 
 // Tous pour les swipe 
 function swipe(side) {
@@ -23,6 +28,12 @@ function swipe(side) {
 }
 
 function addPoint(side){
+  pointMax += currentQuestionValue ;
+    switch (questionType){
+      case 'transport': pointTransportMax += currentQuestionValue; break;
+      case 'trash': pointTrashMax += currentQuestionValue; break;
+      case 'consommation': pointConsomationMax += currentQuestionValue; break;
+    }
   if (side=="left"){
     point += -currentQuestionValue ;
     switch (questionType){
@@ -81,10 +92,10 @@ function questionLoad(){
         console.log("points : "+point)
         
         document.querySelector('#randomQuestion').textContent = question.question;
-        document.querySelector('#p-total').textContent = "Scores : " + point;
-        document.querySelector('#p-transport').textContent = "Mobilité durable :  " + pointTransport;
-        document.querySelector('#p-trash').textContent = "Gestion écologique : " + pointTrash;
-        document.querySelector('#p-consommation').textContent = "Consommation responsable : " + pointConsomation;
+        document.querySelector('#p-total').textContent = "Scores : " + point+ "/"+pointMax;
+        document.querySelector('#p-transport').textContent = "Mobilité durable :  " + pointTransport + "/"+pointTransportMax;
+        document.querySelector('#p-trash').textContent = "Gestion écologique : " + pointTrash+ "/"+pointTrashMax;
+        document.querySelector('#p-consommation').textContent = "Consommation responsable : " + pointConsomation+ "/"+pointConsomationMax;
         
         currentQuestionValue = question.value;
         questionType = question.type;
@@ -104,7 +115,7 @@ function restart(){
 }
 
 function logoRandom(){
-  const randomIndex = Math.floor(Math.random() * 100);
+  const randomIndex = Math.floor(Math.random() * 10);
   var logoElement = document.getElementById("logo");
   if (randomIndex==1){
     logoElement.src = "img/Tindearth-w.png";
