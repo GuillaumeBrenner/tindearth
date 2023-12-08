@@ -1,26 +1,25 @@
 import "./App.css";
-import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-
-import Navbar from "./components/Navbar/navbar";
-import home from "./components/pages/home";
-import quiz from "./components/pages/quiz";
-import forum from "./components/pages/forum";
+import NavBar from "./components/NavBar";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Home } from "./components/Pages/Home";
+import { Forum } from "./components/Pages/Forum";
+import { Quiz } from "./components/Pages/Quiz";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <>
-          <Router>
-            <Navbar />
-            <Route path="/" exact component={home} />
-            <Route path="/quiz" component={quiz} />
-            <Route path="/forum" component={forum} />
-          </Router>
-        </>
-      </header>
-    </div>
+    <>
+      <Router>
+        <NavBar />
+
+        <div className="pages">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/quiz" element={<Quiz />} />
+            <Route path="/forum" element={<Forum />} />
+          </Routes>
+        </div>
+      </Router>
+    </>
   );
 }
 
