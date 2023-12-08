@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    font: italic small-caps bold 14px cursive;
+    color: rgb(61, 58, 58);
+    text-shadow: 1px 1px 2px rgb(147, 147, 147);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background-image: url('img/background.png');
+    background-size: cover;
+}
+
+.background {
+    background-color: #f0f0f0; /* Couleur de fond de la div derrière */
+    border-radius: 10px;
+    z-index: 1; /* Z-index plus bas */
+    background-image: repeating-linear-gradient(45deg, #FF66C4, #fff 10px, #fff 10px, #FF66C4 20px);
+}
+.card-container {
+    position: relative;
+}
+
+.card {
+    --b: 5px;  /* border thickness */
+    --s: 50px; /* size of the dashes */
+    --c1: rgb(255, 255, 255);
+    --c2: #FF66C4;
+
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    max-width: 100%;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.5   );
+}
+.card::before {
+    content:"";
+    position: absolute;
+    inset: 0;
+    padding: var(--b);
+    background: 
+      repeating-conic-gradient(var(--c1) 0 25%,var(--c2) 0 50%) 
+      0 0/var(--s) var(--s) round;
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+    border-radius: 7px;
+  }
+.card img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    max-width: 40%;
+    background-color: #ffffff;
+    font: italic small-caps bold 14px cursive;
+    color: rgb(61, 58, 58);
+    text-shadow: 1px 1px 2px rgb(147, 147, 147);
+}
+
+button:hover {
+    background-color: #ddd;
+}
