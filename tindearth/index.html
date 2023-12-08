@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tindearth</title>
+    <link rel="icon" type="image/x-icon" href="img/tindearth.png">
+</head>
+<body>
+    
+    <div class="background">
+    <div class="card-container" id="card-question">
+        <div class="card" id="card">
+            <img src="img/tindearth.png" alt="Profile Image" id="logo">
+            <p id="randomQuestion" > Question</p>
+            <div class="buttons">
+                <button onclick="swipe('left')"><img src="img/cross.svg" alt="cross"></button>
+                <button onclick="swipe('right')"><img src="img/check.svg" alt="check"></button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="card-container" id="card-end" style="display:none;">
+        <div class="card" id="card">
+            <p id="p-total" > points</p>
+
+            <div class="buttons">
+                <button onclick="restart()">Reccomencer</button>
+                <button onclick="share()">Partager</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
